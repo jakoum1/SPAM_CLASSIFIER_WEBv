@@ -5,8 +5,6 @@ const section = document.getElementById("section")
 
 ajouter.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log(ajouter);
-
     fetch("http://127.0.0.1:5000/predict", {
         method: "POST",
 
