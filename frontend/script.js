@@ -22,14 +22,16 @@ ajouter.addEventListener("click", function (event) {
             let col;
             if (result.prediction === "spam") {
                 show = "<p>The text entered is spam pay attention</p>";
-                col = "red"
+                section.style.color = "#B91C1C";
+                section.style.backgroundColor = "#FEE2E2";
+                show = "<p>⚠️ Spam Detected! This message appears suspicious. Be cautious!</p>";
             }
             else {
-                show = "<p>The text entered is not spam feel free</p>";
-                col = "green"
+                section.style.color = "#15803D";
+                section.style.backgroundColor = "#ffffff";
+                show = "<p>✅ No Spam Detected! This message appears to be safe.</p>";
             }
 
             section.innerHTML = show;
-            section.style.color = col;
         });
 });
